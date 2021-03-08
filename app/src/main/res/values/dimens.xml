@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="icon_size">32dp</dimen>
+    <dimen name="patch_size">72dp</dimen>
+    <dimen name="margin_default">16dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+</resources>

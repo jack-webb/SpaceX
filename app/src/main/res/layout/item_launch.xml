@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="me.jackwebb.spacex.util.Constants"/>
+
+        <variable
+            name="launch"
+            type="me.jackwebb.spacex.model.Launch" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:paddingVertical="@dimen/margin_default">
+
+        <ImageView
+            android:id="@+id/ivPatch"
+            android:layout_width="@dimen/patch_size"
+            android:layout_height="@dimen/patch_size"
+            android:layout_marginHorizontal="@dimen/margin_default"
+            android:contentDescription="@string/mission_patch"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            loadUrl="@{launch.missionPatchUrl}"
+            tools:src="@drawable/ic_launcher_background" />
+
+
+        <LinearLayout
+            android:id="@+id/llLabels"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_default"
+            android:orientation="vertical"
+            app:layout_constraintStart_toEndOf="@id/ivPatch"
+            app:layout_constraintTop_toTopOf="@id/ivPatch">
+
+            <TextView
+                android:id="@+id/tvMissionNameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mission" />
+
+            <TextView
+                android:id="@+id/tvDateLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/date" />
+
+            <TextView
+                android:id="@+id/tvRocketLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rocket" />
+
+            <TextView
+                android:id="@+id/tvDeltaLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{launch.daysDelta &lt; 0 ? @string/days_from_now : @string/days_since_now}"
+                tools:text="Days from now" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_small"
+            android:orientation="vertical"
+            app:layout_constraintStart_toEndOf="@id/llLabels"
+            app:layout_constraintTop_toTopOf="@id/llLabels">
+
+            <TextView
+                android:id="@+id/tvMissionName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{launch.missionName}"
+                tools:text="FalconSat" />
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="2006-03-24T22:30:00.000Z" />
+
+            <TextView
+                android:id="@+id/tvRocket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{launch.rocketName + '/' + launch.rocketType}"
+                tools:text="Falcon 1/Merlin A" />
+
+            <TextView
+                android:id="@+id/tvDelta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{@plurals/days(launch.daysDelta, launch.daysDelta)}"
+                tools:text="+15 days" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvSuccessful"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_default"
+            android:text="@{launch.successful ? @string/tick : @string/cross}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/tick"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,31 @@
+<resources>
+    <string name="title">SpaceX</string>
+    <string name="about">%1$s was founded by %2$s in %3$d. It has now %4$d employees, %5$d launch sites, and is valued at USD %6$s</string>
+    <string name="mission_patch">Mission patch</string>
+    <string name="mission">Mission</string>
+    <string name="date">Date/Time</string>
+    <string name="rocket">Rocket</string>
+    <string name="days_from_now">Days from now</string>
+    <string name="days_since_now">Days since now</string>
+    <string name="tick">✓</string>
+    <string name="cross">✕</string>
+    <string name="article">Article</string>
+    <string name="video">Video</string>
+    <string name="wikipedia">Wikipedia</string>
+    <string name="filter">Filter</string>
+    <string name="filter_years">Filter Years</string>
+    <string name="filter_successful_launches">Filter Successful Launches</string>
+    <string name="successful">Successful</string>
+    <string name="unsuccessful">Unsuccessful</string>
+    <string name="sort_ascending">Sort Ascending</string>
+    <string name="set_sorting_order">Set Sorting Order</string>
+    <string name="submit">Submit</string>
+    <string name="company">Company</string>
+    <string name="launches">Launches</string>
+    <string name="time_utc">%1$sUTC</string>
+
+    <plurals name="days">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+</resources>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvCompanyHeader"
+            android:padding="@dimen/margin_small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@string/company"
+            android:background="@color/text_header_background"/>
+
+        <TextView
+            android:id="@+id/tvAbout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCompanyHeader"
+            tools:text="@string/about" />
+
+        <TextView
+            android:id="@+id/tvLaunchHeader"
+            android:layout_width="match_parent"
+            android:padding="@dimen/margin_small"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvAbout"
+            android:text="@string/launches"
+            android:background="@color/text_header_background"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvLaunches"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLaunchHeader"
+            tools:itemCount="8"
+            tools:listitem="@layout/item_launch"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="text_primary">@color/white</color>
+    <color name="text_secondary">@color/grey_75</color>
+    <color name="text_header_background">@color/grey_25</color>
+</resources>

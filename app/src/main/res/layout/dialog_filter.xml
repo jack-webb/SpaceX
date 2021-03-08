@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_default">
+
+        <TextView
+            android:id="@+id/tvYearsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/filter_years"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvYears"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/tvYearsLabel"
+            app:spanCount="4"
+            tools:itemCount="20"
+            tools:listitem="@layout/item_checkbox" />
+
+        <TextView
+            android:id="@+id/tvSuccessLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="@string/filter_successful_launches"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rvYears" />
+
+        <CheckBox
+            android:id="@+id/cbSuccessful"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/successful"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSuccessLabel" />
+
+        <CheckBox
+            android:id="@+id/cbUnsuccessful"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_small"
+            android:text="@string/unsuccessful"
+            app:layout_constraintStart_toEndOf="@id/cbSuccessful"
+            app:layout_constraintTop_toBottomOf="@id/tvSuccessLabel" />
+
+        <TextView
+            android:id="@+id/tvSortLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="@string/set_sorting_order"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cbSuccessful" />
+
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/swSortAscending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sort_ascending"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSortLabel" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
