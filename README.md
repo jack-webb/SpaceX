@@ -1,6 +1,10 @@
 # SpaceX - A simple Android app displaying SpaceX launch information
 
+View and filter SpaceX launches, open articles and videos, and view company information.
+
 ![screenshots](/images/combined.png)
+
+Using MVVM architecture, coroutines, data binding. Data from the [r/SpaceX API](https://github.com/r-spacex/SpaceX-API).
 
 Uses the following libraries:
 
