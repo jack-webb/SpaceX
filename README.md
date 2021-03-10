@@ -4,7 +4,7 @@ View and filter SpaceX launches, open articles and videos, and view company info
 
 ![screenshots](/images/combined.png)
 
-Using MVVM architecture, coroutines, data binding. Data from the [r/SpaceX API](https://github.com/r-spacex/SpaceX-API)
+Using MVVM architecture, coroutines, data binding. Data from the [r/SpaceX API](https://github.com/r-spacex/SpaceX-API).
 
 Uses the following libraries:
 
