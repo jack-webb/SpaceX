@@ -1,8 +1,11 @@
 # SpaceX - A simple Android app displaying SpaceX launch information
 
 ![App](/images/app.png)
+
 ![Dark](/images/dark.png)
+
 ![Filter](/images/filter.png)
+
 ![Links](/images/links.png)
 
 Uses the following libraries:
